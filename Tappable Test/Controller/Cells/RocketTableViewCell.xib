@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="102" id="KGk-i7-Jjw" customClass="RocketTableViewCell" customModule="Tappable_Test" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="358" height="102"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="358" height="102"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jq6-Em-wIM">
+                        <rect key="frame" x="20" y="21" width="60" height="60"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="jq6-Em-wIM" secondAttribute="height" multiplier="1:1" id="Pa1-sm-bSR"/>
+                        </constraints>
+                    </imageView>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="SpP-q7-P9M">
+                        <rect key="frame" x="88" y="21" width="166" height="59"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Namep" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X2i-Bc-hE8">
+                                <rect key="frame" x="0.0" y="0.0" width="166" height="30.5"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oKt-pN-fI7">
+                                <rect key="frame" x="0.0" y="36.5" width="166" height="22.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="oKt-pN-fI7" firstAttribute="width" secondItem="X2i-Bc-hE8" secondAttribute="width" id="tSq-QQ-a9u"/>
+                        </constraints>
+                    </stackView>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bookmark.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="uhz-v0-v4h">
+                        <rect key="frame" x="299" y="0.0" width="39" height="42"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="uhz-v0-v4h" secondAttribute="height" multiplier="38:41" id="Fx6-c2-6Zz"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="SpP-q7-P9M" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="21" id="1jH-Yi-LSo"/>
+                    <constraint firstAttribute="trailing" secondItem="uhz-v0-v4h" secondAttribute="trailing" constant="20" symbolic="YES" id="ETf-Nk-FDW"/>
+                    <constraint firstItem="uhz-v0-v4h" firstAttribute="leading" secondItem="SpP-q7-P9M" secondAttribute="trailing" constant="45" id="LEE-qK-Frw"/>
+                    <constraint firstAttribute="bottom" secondItem="uhz-v0-v4h" secondAttribute="bottom" constant="60" id="N74-AI-c9L"/>
+                    <constraint firstItem="jq6-Em-wIM" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" symbolic="YES" id="PgV-kt-8g8"/>
+                    <constraint firstItem="jq6-Em-wIM" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="21" id="Q6U-J0-SMF"/>
+                    <constraint firstItem="uhz-v0-v4h" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="XVw-bD-K8B"/>
+                    <constraint firstAttribute="bottom" secondItem="jq6-Em-wIM" secondAttribute="bottom" constant="21" id="e5P-Vu-Cra"/>
+                    <constraint firstAttribute="bottom" secondItem="SpP-q7-P9M" secondAttribute="bottom" constant="22" id="eLP-xd-odQ"/>
+                    <constraint firstItem="SpP-q7-P9M" firstAttribute="leading" secondItem="jq6-Em-wIM" secondAttribute="trailing" constant="8" symbolic="YES" id="k9d-48-2oM"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="fireDateLabel" destination="oKt-pN-fI7" id="8jP-bw-Y4D"/>
+                <outlet property="rocketImageView" destination="jq6-Em-wIM" id="dAz-hq-ZUe"/>
+                <outlet property="rocketNameLabel" destination="X2i-Bc-hE8" id="I7s-1H-Prf"/>
+                <outlet property="successRateImageView" destination="uhz-v0-v4h" id="HtM-7V-5o4"/>
+            </connections>
+            <point key="canvasLocation" x="165.21739130434784" y="94.419642857142847"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="bookmark.fill" catalog="system" width="112" height="128"/>
+    </resources>
+</document>
