@@ -66,4 +66,8 @@ extension RocketsViewController: RocketsViewModelDelegate, UITableViewDataSource
         return 102
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("called")
+        self.performSegue(withIdentifier: "detail", sender: nil)
+    }
 }

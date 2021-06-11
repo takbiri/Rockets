@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ITi-24-CLw">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ITi-24-CLw">
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <connections>
@@ -37,11 +37,44 @@
                     <navigationItem key="navigationItem" id="eY7-MT-X2U"/>
                     <connections>
                         <outlet property="tableView" destination="ITi-24-CLw" id="QBa-2K-31E"/>
+                        <segue destination="oEq-u0-XWG" kind="show" identifier="detail" id="AVQ-uk-aQh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1015.9420289855074" y="88.392857142857139"/>
+        </scene>
+        <!--Rocket Detail View Controller-->
+        <scene sceneID="Siu-JB-gjh">
+            <objects>
+                <viewController id="oEq-u0-XWG" customClass="RocketDetailViewController" customModule="Tappable_Test" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Tgz-Va-Otn">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hyw-ug-bKB">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="tintColor" red="0.45098039215686275" green="0.9882352941176471" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="W3o-Re-Lqa"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="hyw-ug-bKB" firstAttribute="top" secondItem="W3o-Re-Lqa" secondAttribute="top" id="1xr-xB-hvr"/>
+                            <constraint firstItem="hyw-ug-bKB" firstAttribute="leading" secondItem="W3o-Re-Lqa" secondAttribute="leading" id="cET-cY-48i"/>
+                            <constraint firstItem="W3o-Re-Lqa" firstAttribute="bottom" secondItem="hyw-ug-bKB" secondAttribute="bottom" id="xfI-qN-hR5"/>
+                            <constraint firstItem="W3o-Re-Lqa" firstAttribute="trailing" secondItem="hyw-ug-bKB" secondAttribute="trailing" id="zut-IK-AP2"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Wgp-pi-bBz"/>
+                    <connections>
+                        <outlet property="containerView" destination="hyw-ug-bKB" id="ldq-Xy-akH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="k35-1e-cjt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1733" y="88"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Kd9-i8-u9v">
