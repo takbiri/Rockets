@@ -48,7 +48,7 @@ extension RocketsViewController: RocketsViewModelDelegate, UITableViewDataSource
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let rocket = RocketTableViewCellViewModel(self.rockets![indexPath.row])
+        let rocket = RocketTableViewCellModel(self.rockets![indexPath.row])
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! RocketTableViewCell
         
@@ -59,6 +59,7 @@ extension RocketsViewController: RocketsViewModelDelegate, UITableViewDataSource
         cell.successRateImageView.tintColor = rocket.success_rate_color
         cell.rocketImageView.sd_setImage(with: imageUrl, completed: nil)
         
+        cell.selectionStyle = .none
         return cell
     }
     
@@ -67,7 +68,20 @@ extension RocketsViewController: RocketsViewModelDelegate, UITableViewDataSource
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("called")
-        self.performSegue(withIdentifier: "detail", sender: nil)
+        
+        let rocket = RocketTableViewCellModel(self.rockets![indexPath.row])
+
+        self.performSegue(withIdentifier: "detail", sender: rocket)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "detail"{
+            
+            let rocket = sender as! RocketTableViewCellModel
+            
+            let rocketDetailVC = segue.destination as! RocketDetailViewController
+            rocketDetailVC.rocketID = rocket.id
+            rocketDetailVC.navigationItem.title = "\(rocket.name)"
+        }
     }
 }

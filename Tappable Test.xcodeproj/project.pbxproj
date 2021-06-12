@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,14 +16,17 @@
 		0A23E16C2673460E0031E964 /* Tappable_TestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A23E16B2673460E0031E964 /* Tappable_TestTests.swift */; };
 		0A23E1772673460E0031E964 /* Tappable_TestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A23E1762673460E0031E964 /* Tappable_TestUITests.swift */; };
 		0A23E18526734B2A0031E964 /* RocketsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A23E18426734B2A0031E964 /* RocketsViewController.swift */; };
-		0A23E18726734C5B0031E964 /* Rockets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A23E18626734C5B0031E964 /* Rockets.swift */; };
+		0A23E18726734C5B0031E964 /* SingleRocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A23E18626734C5B0031E964 /* SingleRocket.swift */; };
 		0A23E18926734DD50031E964 /* RocketsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A23E18826734DD50031E964 /* RocketsViewModel.swift */; };
 		0A23E18F267371C20031E964 /* RocketTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A23E18D267371C20031E964 /* RocketTableViewCell.swift */; };
 		0A23E190267371C20031E964 /* RocketTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A23E18E267371C20031E964 /* RocketTableViewCell.xib */; };
-		0A23E193267376880031E964 /* RocketTableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A23E192267376880031E964 /* RocketTableViewCellViewModel.swift */; };
+		0A23E193267376880031E964 /* RocketTableViewCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A23E192267376880031E964 /* RocketTableViewCellModel.swift */; };
 		0A23E19A26737DB00031E964 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 0A23E19926737DB00031E964 /* .gitignore */; };
 		0A7C65D62673BC5800AEE280 /* RocketDetailSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7C65D52673BC5800AEE280 /* RocketDetailSwiftUIView.swift */; };
 		0A7C65D82673BC7D00AEE280 /* RocketDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7C65D72673BC7D00AEE280 /* RocketDetailViewController.swift */; };
+		0AC09EE12674A9AE00E57E57 /* RocketDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC09EE02674A9AE00E57E57 /* RocketDetail.swift */; };
+		0AC09EE32674AB3A00E57E57 /* RocketDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC09EE22674AB3A00E57E57 /* RocketDetailViewModel.swift */; };
+		0AC09EE92674DF6C00E57E57 /* SwURL in Frameworks */ = {isa = PBXBuildFile; productRef = 0AC09EE82674DF6C00E57E57 /* SwURL */; };
 		5FDB0557DBE03BD0CA989593 /* Pods_Tappable_Test.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED4C5DA8C30A6249FE1631C7 /* Pods_Tappable_Test.framework */; };
 		ED30ECFCC348967E3F3F37E2 /* Pods_Tappable_Test_Tappable_TestUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8E9188989D227540D786E0F /* Pods_Tappable_Test_Tappable_TestUITests.framework */; };
 /* End PBXBuildFile section */
@@ -60,14 +63,16 @@
 		0A23E1762673460E0031E964 /* Tappable_TestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tappable_TestUITests.swift; sourceTree = "<group>"; };
 		0A23E1782673460E0031E964 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0A23E18426734B2A0031E964 /* RocketsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketsViewController.swift; sourceTree = "<group>"; };
-		0A23E18626734C5B0031E964 /* Rockets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rockets.swift; sourceTree = "<group>"; };
+		0A23E18626734C5B0031E964 /* SingleRocket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleRocket.swift; sourceTree = "<group>"; };
 		0A23E18826734DD50031E964 /* RocketsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketsViewModel.swift; sourceTree = "<group>"; };
 		0A23E18D267371C20031E964 /* RocketTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketTableViewCell.swift; sourceTree = "<group>"; };
 		0A23E18E267371C20031E964 /* RocketTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RocketTableViewCell.xib; sourceTree = "<group>"; };
-		0A23E192267376880031E964 /* RocketTableViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketTableViewCellViewModel.swift; sourceTree = "<group>"; };
+		0A23E192267376880031E964 /* RocketTableViewCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketTableViewCellModel.swift; sourceTree = "<group>"; };
 		0A23E19926737DB00031E964 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		0A7C65D52673BC5800AEE280 /* RocketDetailSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketDetailSwiftUIView.swift; sourceTree = "<group>"; };
 		0A7C65D72673BC7D00AEE280 /* RocketDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketDetailViewController.swift; sourceTree = "<group>"; };
+		0AC09EE02674A9AE00E57E57 /* RocketDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketDetail.swift; sourceTree = "<group>"; };
+		0AC09EE22674AB3A00E57E57 /* RocketDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketDetailViewModel.swift; sourceTree = "<group>"; };
 		77E0493CC7CEBC9EDE7C478A /* Pods-Tappable TestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tappable TestTests.release.xcconfig"; path = "Target Support Files/Pods-Tappable TestTests/Pods-Tappable TestTests.release.xcconfig"; sourceTree = "<group>"; };
 		822E5AFA9F45A9C71743FCCC /* Pods-Tappable Test-Tappable TestUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tappable Test-Tappable TestUITests.release.xcconfig"; path = "Target Support Files/Pods-Tappable Test-Tappable TestUITests/Pods-Tappable Test-Tappable TestUITests.release.xcconfig"; sourceTree = "<group>"; };
 		8ED18CF2B986EBF3D99E5ED0 /* Pods-Tappable TestTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tappable TestTests.debug.xcconfig"; path = "Target Support Files/Pods-Tappable TestTests/Pods-Tappable TestTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -84,6 +89,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0AC09EE92674DF6C00E57E57 /* SwURL in Frameworks */,
 				5FDB0557DBE03BD0CA989593 /* Pods_Tappable_Test.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -167,7 +173,9 @@
 		0A23E18A2673536E0031E964 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				0A23E18626734C5B0031E964 /* Rockets.swift */,
+				0A23E192267376880031E964 /* RocketTableViewCellModel.swift */,
+				0A23E18626734C5B0031E964 /* SingleRocket.swift */,
+				0AC09EE02674A9AE00E57E57 /* RocketDetail.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -176,7 +184,7 @@
 			isa = PBXGroup;
 			children = (
 				0A23E18826734DD50031E964 /* RocketsViewModel.swift */,
-				0A23E192267376880031E964 /* RocketTableViewCellViewModel.swift */,
+				0AC09EE22674AB3A00E57E57 /* RocketDetailViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -250,6 +258,9 @@
 			dependencies = (
 			);
 			name = "Tappable Test";
+			packageProductDependencies = (
+				0AC09EE82674DF6C00E57E57 /* SwURL */,
+			);
 			productName = "Tappable Test";
 			productReference = 0A23E1512673460D0031E964 /* Tappable Test.app */;
 			productType = "com.apple.product-type.application";
@@ -324,6 +335,9 @@
 				Base,
 			);
 			mainGroup = 0A23E1482673460D0031E964;
+			packageReferences = (
+				0AC09EE72674DF6C00E57E57 /* XCRemoteSwiftPackageReference "SwURL" */,
+			);
 			productRefGroup = 0A23E1522673460D0031E964 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -474,13 +488,15 @@
 			files = (
 				0A7C65D82673BC7D00AEE280 /* RocketDetailViewController.swift in Sources */,
 				0A23E18526734B2A0031E964 /* RocketsViewController.swift in Sources */,
+				0AC09EE12674A9AE00E57E57 /* RocketDetail.swift in Sources */,
 				0A7C65D62673BC5800AEE280 /* RocketDetailSwiftUIView.swift in Sources */,
 				0A23E1552673460D0031E964 /* AppDelegate.swift in Sources */,
 				0A23E1572673460D0031E964 /* SceneDelegate.swift in Sources */,
+				0AC09EE32674AB3A00E57E57 /* RocketDetailViewModel.swift in Sources */,
 				0A23E18926734DD50031E964 /* RocketsViewModel.swift in Sources */,
-				0A23E18726734C5B0031E964 /* Rockets.swift in Sources */,
+				0A23E18726734C5B0031E964 /* SingleRocket.swift in Sources */,
 				0A23E18F267371C20031E964 /* RocketTableViewCell.swift in Sources */,
-				0A23E193267376880031E964 /* RocketTableViewCellViewModel.swift in Sources */,
+				0A23E193267376880031E964 /* RocketTableViewCellModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -819,6 +835,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		0AC09EE72674DF6C00E57E57 /* XCRemoteSwiftPackageReference "SwURL" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/cmtrounce/SwURL";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.4.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		0AC09EE82674DF6C00E57E57 /* SwURL */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0AC09EE72674DF6C00E57E57 /* XCRemoteSwiftPackageReference "SwURL" */;
+			productName = SwURL;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 0A23E1492673460D0031E964 /* Project object */;
 }

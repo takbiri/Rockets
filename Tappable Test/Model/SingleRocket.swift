@@ -13,5 +13,6 @@ struct SingleRocket: Codable{
     let success_rate_pct: Int
     let first_flight: String
     let flickr_images: [String]
+    let id: String
     
 }

@@ -24,17 +24,27 @@ class RocketsViewModel {
                 print("something bad happened: \(error!.localizedDescription)")
                 return
             }
-            do {
+            
+            guard let response = response as? HTTPURLResponse else { return }
+            if response.statusCode == 200 {
+                guard let data = data else { return }
                 
-                let result = try JSONDecoder().decode([SingleRocket].self, from: data!)
-                
-                DispatchQueue.main.async {
-                    self.delegate?.didFinishFetchingRockets(result)
+                do {
+                    
+                    let result = try JSONDecoder().decode([SingleRocket].self, from: data)
+                    
+                    DispatchQueue.main.async {
+                        self.delegate?.didFinishFetchingRockets(result)
+                    }
                 }
-            }
-            catch {
-                print("cant decode the data !")
-            }
+                 catch let error {
+                    print("cant decode the data: \(error)")
+                }
+                
+            }  else {
+                    print("HTTPURLResponse code: \(response.statusCode)")
+                }
+            
         }.resume()
     }
     

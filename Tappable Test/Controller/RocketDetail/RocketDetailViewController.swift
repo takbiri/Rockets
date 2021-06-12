@@ -12,10 +12,13 @@ class RocketDetailViewController: UIViewController {
 
     @IBOutlet weak var containerView: UIView!
     
+    var rocketID: String!
+    var rocketDetailViewModel = RocketDetailViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        let childView = UIHostingController(rootView: RocketDetailSwiftUIView())
+        
+        let childView = UIHostingController(rootView: RocketDetailSwiftUIView(rocketID: rocketID))
         addChild(childView)
         childView.view.frame = containerView.bounds
         containerView.addSubview(childView.view)

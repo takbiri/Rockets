@@ -7,18 +7,20 @@
 
 import UIKit
 
-struct RocketTableViewCellViewModel{
+struct RocketTableViewCellModel{
     
     let name: String
     let first_flight: String
     let flickr_images: [String]
     let success_rate_color: UIColor
+    let id: String
     
-    init(_ singleRocket: SingleRocket) {
+    init (_ singleRocket: SingleRocket) {
         
         self.name = singleRocket.name
         self.first_flight = singleRocket.first_flight
         self.flickr_images = singleRocket.flickr_images
+        self.id = singleRocket.id
         
         if singleRocket.success_rate_pct <= 29 {
             self.success_rate_color = .red
