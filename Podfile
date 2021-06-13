@@ -7,6 +7,7 @@ target 'Tappable Test' do
 
 pod 'SVProgressHUD'
 pod 'SDWebImage'
+pod 'Alamofire'
 
   # Pods for Tappable Test
 

@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		049290FE0CBBF9BD11D4A560 /* Pods_Tappable_TestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AC1D0B5FD111FF5AF31D376 /* Pods_Tappable_TestTests.framework */; };
+		0A232CDA26765D8500BC5E62 /* RocketDetailViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A232CD926765D8500BC5E62 /* RocketDetailViewModelTests.swift */; };
+		0A232CDC2676707600BC5E62 /* RocketsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A232CDB2676707600BC5E62 /* RocketsViewModelTests.swift */; };
 		0A23E1552673460D0031E964 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A23E1542673460D0031E964 /* AppDelegate.swift */; };
 		0A23E1572673460D0031E964 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A23E1562673460D0031E964 /* SceneDelegate.swift */; };
 		0A23E15C2673460D0031E964 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A23E15A2673460D0031E964 /* Main.storyboard */; };
@@ -49,6 +51,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0A232CD926765D8500BC5E62 /* RocketDetailViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketDetailViewModelTests.swift; sourceTree = "<group>"; };
+		0A232CDB2676707600BC5E62 /* RocketsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketsViewModelTests.swift; sourceTree = "<group>"; };
 		0A23E1512673460D0031E964 /* Tappable Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tappable Test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A23E1542673460D0031E964 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0A23E1562673460D0031E964 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -141,10 +145,10 @@
 			children = (
 				0A23E1542673460D0031E964 /* AppDelegate.swift */,
 				0A23E1562673460D0031E964 /* SceneDelegate.swift */,
-				0A23E15A2673460D0031E964 /* Main.storyboard */,
 				0A23E18C267354DA0031E964 /* Controller */,
 				0A23E18B267353750031E964 /* ViewModel */,
 				0A23E18A2673536E0031E964 /* Model */,
+				0A23E15A2673460D0031E964 /* Main.storyboard */,
 				0A23E15D2673460E0031E964 /* Assets.xcassets */,
 				0A23E15F2673460E0031E964 /* LaunchScreen.storyboard */,
 				0A23E1622673460E0031E964 /* Info.plist */,
@@ -155,6 +159,8 @@
 		0A23E16A2673460E0031E964 /* Tappable TestTests */ = {
 			isa = PBXGroup;
 			children = (
+				0A232CD926765D8500BC5E62 /* RocketDetailViewModelTests.swift */,
+				0A232CDB2676707600BC5E62 /* RocketsViewModelTests.swift */,
 				0A23E16B2673460E0031E964 /* Tappable_TestTests.swift */,
 				0A23E16D2673460E0031E964 /* Info.plist */,
 			);
@@ -504,6 +510,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A232CDA26765D8500BC5E62 /* RocketDetailViewModelTests.swift in Sources */,
+				0A232CDC2676707600BC5E62 /* RocketsViewModelTests.swift in Sources */,
 				0A23E16C2673460E0031E964 /* Tappable_TestTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

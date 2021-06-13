@@ -87,9 +87,9 @@ struct RocketDetailSwiftUIView: View {
                 
                 Spacer()
             }
-        }.ignoresSafeArea()
+        }
         .onAppear {
-            rocketDetailViewModel.fetchRocket()
+            rocketDetailViewModel.fetchRocket(completion: nil)
         }
         
     }
@@ -98,6 +98,8 @@ struct RocketDetailSwiftUIView: View {
 struct RocketDetailSwiftUIView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
+            
         }
+        .previewDevice("iPhone 11")
     }
 }

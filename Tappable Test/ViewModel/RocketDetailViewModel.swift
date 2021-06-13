@@ -7,9 +7,11 @@
 
 import SwiftUI
 import SVProgressHUD
+import Alamofire
 
 class RocketDetailViewModel: ObservableObject {
     
+    typealias completionHandler = (RocketDetail)->()
     private var apiUrl: String = ""
     var rocketID: String! {
         didSet {
@@ -20,35 +22,39 @@ class RocketDetailViewModel: ObservableObject {
     @Published var detail: RocketDetail!
     @Published var dataHasBeenLoaded: Bool = false
     
-    func fetchRocket() {
+    func fetchRocket(completion: completionHandler?) {
         SVProgressHUD.show()
                 
         guard let url = URL(string: apiUrl) else { return }
-
-        URLSession.shared.dataTask(with: url) { (data, response, error) in
-            if error != nil {
-                print("something bad happened: \(error!.localizedDescription)")
-                return
-            }
-
-            guard let response = response as? HTTPURLResponse else { return }
-            if response.statusCode == 200 {
-                guard let data = data else { return }
-                DispatchQueue.main.async {
+        
+        AF.request(url).response { response in
+            
+            DispatchQueue.main.async {
+                
+                SVProgressHUD.dismiss()
+                
+                switch response.result {
+                case .success:
+                    
                     do {
-                        
-                        self.detail = try JSONDecoder().decode(RocketDetail.self, from: data)
+                        self.detail = try JSONDecoder().decode(RocketDetail.self, from: response.data!)
                         self.dataHasBeenLoaded = true
-                        SVProgressHUD.dismiss()
+                        completion?(self.detail)
                         
-                    } catch let error {
-                        print("cant decode the data: \(error)")
+                    }catch let error{
+                        print("cant decode the data: \(error.localizedDescription)")
                     }
+                    break
+                
+                case .failure(let error):
+                    print("HTTPURLResponse code: \(error.localizedDescription)")
+                    break
                 }
-            } else {
-                print("HTTPURLResponse code: \(response.statusCode)")
+
             }
-        }.resume()
+            
+        }
+        
     }
     
     func getColorFromSuccessRate(_ rate: Int) -> Color {

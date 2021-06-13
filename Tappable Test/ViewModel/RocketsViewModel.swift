@@ -6,46 +6,48 @@
 //
 
 import Foundation
+import Alamofire
 
 protocol RocketsViewModelDelegate {
     func didFinishFetchingRockets(_ rockets: [SingleRocket])
 }
 
 class RocketsViewModel {
+    
+    typealias completionHandler = ([SingleRocket])->()
     var delegate: RocketsViewModelDelegate?
     
-    func fetchRockets(){
+    func fetchRockets(completion: completionHandler?){
         
         guard let url = URL(string: "https://api.spacexdata.com/v4/rockets") else {return}
         
-        URLSession.shared.dataTask(with: url) { data, response, error in
+        AF.request(url).response { response in
             
-            if error != nil {
-                print("something bad happened: \(error!.localizedDescription)")
-                return
-            }
-            
-            guard let response = response as? HTTPURLResponse else { return }
-            if response.statusCode == 200 {
-                guard let data = data else { return }
+            DispatchQueue.main.async {
                 
-                do {
-                    
-                    let result = try JSONDecoder().decode([SingleRocket].self, from: data)
-                    
-                    DispatchQueue.main.async {
-                        self.delegate?.didFinishFetchingRockets(result)
+                switch response.result {
+                case .success:
+                    do {
+                        
+                        let result = try JSONDecoder().decode([SingleRocket].self, from: response.data!)
+                        
+                        DispatchQueue.main.async {
+                            self.delegate?.didFinishFetchingRockets(result)
+                            completion?(result)
+                        }
+                        
                     }
+                     catch let error {
+                        print("cant decode the data: \(error.localizedDescription)")
+                    }
+                    
+                    break
+                    
+                case .failure(let error):
+                    print("HTTPURLResponse code: \(error.localizedDescription)")
+                    break
                 }
-                 catch let error {
-                    print("cant decode the data: \(error)")
-                }
-                
-            }  else {
-                    print("HTTPURLResponse code: \(response.statusCode)")
-                }
-            
-        }.resume()
+            }
+        }
     }
-    
 }

@@ -17,6 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         SVProgressHUD.setDefaultMaskType(.clear)
         
+
         let sb = UIStoryboard(name: "Main", bundle: nil)
         let startVC = sb.instantiateInitialViewController()
         window?.rootViewController = startVC

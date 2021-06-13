@@ -22,7 +22,7 @@ class RocketsViewController: UIViewController {
         
         SVProgressHUD.show()
         rocketsViewModel.delegate = self
-        rocketsViewModel.fetchRockets()
+        rocketsViewModel.fetchRockets(completion: nil)
         
         updateUI()
     }
@@ -40,7 +40,7 @@ extension RocketsViewController: RocketsViewModelDelegate, UITableViewDataSource
         self.rockets = rockets
         self.tableView.reloadData()
         
-        SVProgressHUD.dismiss()
+//        SVProgressHUD.dismiss()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
