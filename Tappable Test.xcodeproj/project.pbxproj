@@ -117,6 +117,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0A232CDD2676788C00BC5E62 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0A23E15A2673460D0031E964 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0A232CDE2676789800BC5E62 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				0A23E15D2673460E0031E964 /* Assets.xcassets */,
+				0A23E15F2673460E0031E964 /* LaunchScreen.storyboard */,
+				0A23E1622673460E0031E964 /* Info.plist */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
 		0A23E1482673460D0031E964 = {
 			isa = PBXGroup;
 			children = (
@@ -148,10 +166,8 @@
 				0A23E18C267354DA0031E964 /* Controller */,
 				0A23E18B267353750031E964 /* ViewModel */,
 				0A23E18A2673536E0031E964 /* Model */,
-				0A23E15A2673460D0031E964 /* Main.storyboard */,
-				0A23E15D2673460E0031E964 /* Assets.xcassets */,
-				0A23E15F2673460E0031E964 /* LaunchScreen.storyboard */,
-				0A23E1622673460E0031E964 /* Info.plist */,
+				0A232CDD2676788C00BC5E62 /* View */,
+				0A232CDE2676789800BC5E62 /* Source */,
 			);
 			path = "Tappable Test";
 			sourceTree = "<group>";
@@ -683,7 +699,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JXU577K7BA;
-				INFOPLIST_FILE = "Tappable Test/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Tappable Test/Source/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -703,7 +719,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JXU577K7BA;
-				INFOPLIST_FILE = "Tappable Test/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Tappable Test/Source/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
