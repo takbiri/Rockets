@@ -23,30 +23,27 @@ class RocketsViewModel {
         
         AF.request(url).response { response in
             
-            DispatchQueue.main.async {
-                
-                switch response.result {
-                case .success:
-                    do {
-                        
-                        let result = try JSONDecoder().decode([SingleRocket].self, from: response.data!)
-                        
-                        DispatchQueue.main.async {
-                            self.delegate?.didFinishFetchingRockets(result)
-                            completion?(result)
-                        }
-                        
-                    }
-                     catch let error {
-                        print("cant decode the data: \(error.localizedDescription)")
+            switch response.result {
+            case .success:
+                do {
+                    
+                    let result = try JSONDecoder().decode([SingleRocket].self, from: response.data!)
+                    
+                    DispatchQueue.main.async {
+                        self.delegate?.didFinishFetchingRockets(result)
+                        completion?(result)
                     }
                     
-                    break
-                    
-                case .failure(let error):
-                    print("HTTPURLResponse code: \(error.localizedDescription)")
-                    break
                 }
+                catch let error {
+                    print("cant decode the data: \(error.localizedDescription)")
+                }
+                
+                break
+                
+            case .failure(let error):
+                print("HTTPURLResponse code: \(error.localizedDescription)")
+                break
             }
         }
     }
