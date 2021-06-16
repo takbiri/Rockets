@@ -120,6 +120,7 @@
 		0A232CDD2676788C00BC5E62 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				0A23E191267372150031E964 /* Cells */,
 				0A23E15A2673460D0031E964 /* Main.storyboard */,
 			);
 			path = View;
@@ -215,7 +216,6 @@
 			isa = PBXGroup;
 			children = (
 				0A7C65D42673BC2C00AEE280 /* RocketDetail */,
-				0A23E191267372150031E964 /* Cells */,
 				0A23E18426734B2A0031E964 /* RocketsViewController.swift */,
 			);
 			path = Controller;
