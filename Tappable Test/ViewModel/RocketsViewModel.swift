@@ -8,14 +8,14 @@
 import Foundation
 import Alamofire
 
-protocol RocketsViewModelDelegate {
+protocol RocketsViewModelDelegate:AnyObject {
     func didFinishFetchingRockets(_ rockets: [SingleRocket])
 }
 
 class RocketsViewModel {
     
     typealias completionHandler = ([SingleRocket])->()
-    var delegate: RocketsViewModelDelegate?
+    weak var delegate: RocketsViewModelDelegate?
     
     func fetchRockets(completion: completionHandler?){
         
